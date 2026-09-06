@@ -8,5 +8,5 @@ on:
 jobs:
   run:
     if: github.actor != github.event.issue.user.login && !contains(github.event.issue.labels.*.name, 'pending discussion')
-    uses: jtorleon-studios-team/.workflows/.github/workflows/auto-pending-discussion.yml@main
+    uses: jtorleon-studios-team/.github/.github/workflows/call.auto-pending-discussion.yml@main
     secrets: inherit

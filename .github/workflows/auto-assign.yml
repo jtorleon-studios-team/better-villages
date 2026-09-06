@@ -8,5 +8,5 @@ on:
 
 jobs:
   run:
-    uses: jtorleon-studios-team/.workflows/.github/workflows/auto-assign.yml@main
+    uses: jtorleon-studios-team/.github/.github/workflows/call.auto-assign.yml@main
     secrets: inherit
