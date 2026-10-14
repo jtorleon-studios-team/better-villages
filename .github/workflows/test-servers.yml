@@ -1,0 +1,16 @@
+name: Test Run Server
+run-name: ${{ github.actor }} - Test Run Server ${{ github.event.client_payload.tag }} ${{ github.event.client_payload.release_id }}
+
+on:
+  repository_dispatch:
+    types: [test-servers]
+
+permissions:
+  contents: write
+
+jobs:
+  test-servers:
+    uses: jtorleon-studios-team/.github/.github/workflows/call.test-servers.yml@main
+    with:
+      tag: ${{ github.event.client_payload.tag }}
+      server_properties: ${{ github.event.client_payload.server_properties }}
